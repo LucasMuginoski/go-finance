@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+//importar o themeprovider que é um contexto e disponbilida o theme para import e uso
+import { ThemeProvider } from 'styled-components';
+import  theme  from './src/global/styles/theme';
+
+//importa por padrão o index.tsx 
+import { Dashboard } from './src/screens/dashboard';
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={theme}>
+      <Dashboard />
+    </ThemeProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
