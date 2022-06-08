@@ -1,7 +1,7 @@
 // usar o /native para importar elementos do react native
 import styled from "styled-components/native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize"
-import theme from "../../global/styles/theme";
+import { Feather } from "@expo/vector-icons";
 
 export const Container = styled.View`
     flex: 1;
@@ -20,6 +20,9 @@ export const Header = styled.View`
 export const UserWraper = styled.View`
     width: 100%;
     padding: 0 ${RFValue(24)}px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const UserInfo = styled.View`
@@ -47,4 +50,9 @@ export const UserName = styled.Text`
         color: ${ ({theme})=> theme.colors.shape};
     font-size: ${RFValue(18)}px;
     font-family: ${ ({theme})=> theme.fonts.bold};
+`;
+
+export const IconPower = styled(Feather)`
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: ${RFValue(24)}px;
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import {Text} from "react-native"
+
 import { 
     Container,  
     Header,
@@ -8,7 +8,8 @@ import {
     Photo,
     User,
     UserGrettings,
-    UserName
+    UserName,
+    IconPower
 } from "./styles"; 
 
 export function Dashboard(){
@@ -24,7 +25,9 @@ export function Dashboard(){
                             <UserGrettings>Olá, </UserGrettings>
                             <UserName>Lucas!</UserName>
                     </UserInfo>
+                    <IconPower name="power"/>
                 </UserWraper>
+                
             </Header>
         </Container>
     );
